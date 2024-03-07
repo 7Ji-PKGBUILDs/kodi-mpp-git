@@ -19,7 +19,7 @@ makedepends=(
   'upower' 'giflib' 'ghostscript' 'meson' 'gtest' 'graphviz'
   'wayland-protocols' 'waylandpp' 'libxkbcommon'
   'libinput' 'flatbuffers'
-  'mpp'
+  'mpp' 'gitweb-dlagent'
 )
 depends=(
   'bluez-libs' 'curl' 'dav1d' 'desktop-file-utils' 'hicolor-icon-theme'
@@ -41,7 +41,7 @@ optdepends=(
 )
 provides=('kodi' 'kodi-mpp')
 conflicts=('kodi' 'kodi-dev' 'kodi-eventclients' 'kodi-tools-texturepacker')
-options=(!distcc !lto strip)
+options=(!lto strip)
 
 _gitname=xbmc
 _codename=Nexus
@@ -59,10 +59,13 @@ _libudfread_version="1.1.2"
 
 _cmake_release_type=Release
 
+DLAGENTS+=('gitweb-dlagent::/usr/bin/gitweb-dlagent sync %u')
+_url_kodi="gitweb-dlagent://github.com/xbmc/xbmc.git#branch=${_codename}"
+_url_ffmpeg="gitweb-dlagent://github.com/hbiyik/ffmpeg-rockchip.git#branch=${_ff_branch}"
 # checkout individual binary addons and ffmpeg
 source=(
-  "git+https://github.com/xbmc/xbmc.git#branch=${_codename}"
-  "git+https://github.com/hbiyik/ffmpeg-rockchip.git#branch=${_ff_branch}"
+  "$_url_kodi"
+  "$_url_ffmpeg"
   "libdvdcss-$_libdvdcss_version.tar.gz::https://github.com/xbmc/libdvdcss/archive/$_libdvdcss_version.tar.gz"
   "libdvdnav-$_libdvdnav_version.tar.gz::https://github.com/xbmc/libdvdnav/archive/$_libdvdnav_version.tar.gz"
   "libdvdread-$_libdvdread_version.tar.gz::https://github.com/xbmc/libdvdread/archive/$_libdvdread_version.tar.gz"
@@ -107,13 +110,14 @@ pkgver() {
   local _kcommits=0
 
   cd "${srcdir}/ffmpeg-rockchip"
-  _fcommits="$(git rev-list --count HEAD)"
+  _fcommits=$(gitweb-dlagent version ${_url_ffmpeg} --pattern \{revision\})
   
   cd "${srcdir}/${_gitname}"
-  _kcommits="$(git rev-list --count HEAD)"
+  _kcommits=$(gitweb-dlagent version ${_url_kodi} --pattern \{revision\})
 
   _revnum=$(($_kcommits + $_fcommits))
-  printf "r%s.%s" $_revnum "$(git rev-parse --short HEAD)"
+  _commit=$(gitweb-dlagent version ${_url_kodi} --pattern \{commit:.10s\})
+  printf "r%s.%s" $_revnum $_commit
 }
 
 prepare() {
