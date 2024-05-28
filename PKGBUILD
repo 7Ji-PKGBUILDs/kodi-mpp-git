@@ -23,7 +23,7 @@ makedepends=(
   'upower' 'giflib' 'ghostscript' 'meson' 'gtest' 'graphviz'
   'wayland-protocols' 'waylandpp' 'libxkbcommon'
   'libinput' 'flatbuffers' 'rapidjson'
-  'mpp' 'gitweb-dlagent'
+  'mpp' 'gitweb-dlagent>=0.3'
 )
 depends=(
   'bluez-libs' 'curl' 'dav1d' 'desktop-file-utils' 'hicolor-icon-theme'
