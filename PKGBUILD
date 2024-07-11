@@ -19,7 +19,7 @@ makedepends=(
   'libmodplug' 'libmpeg2' 'libnfs' 'libplist' 'libpulse' 'libva'
   'libva-vdpau-driver' 'libxrandr' 'libxslt' 'lirc' 'lzo' 'mesa' 'nasm'
   'pipewire' 'python-pycryptodomex' 'python-pillow' 'python-pybluez'
-  'python-simplejson' 'shairplay' 'smbclient' 'sndio' 'spdlog' 'taglib'
+  'python-simplejson' 'shairplay' 'smbclient' 'sndio' 'spdlog'
   'tinyxml' 'swig' 'upower' 'giflib' 'rapidjson' 'ghostscript' 'meson' 'gtest'
   'graphviz' 'pcre' 'tinyxml2' 'libdisplay-info'
   # cmake/scripts/linux/Install.cmake calls distutils
@@ -38,7 +38,7 @@ depends=(
   'libplist' 'libpulse' 'libva' 'libvdpau' 'libxslt' 'lirc' 'lzo'
   'mariadb-libs' 'mesa' 'libpipewire' 'python-pillow' 'python-pycryptodomex'
   'python-simplejson' 'shairplay' 'smbclient' 'sndio' 'spdlog' 'sqlite'
-  'taglib' 'tinyxml' 'libxrandr' 'libxkbcommon' 'waylandpp' 'libinput'
+  'tinyxml' 'libxrandr' 'libxkbcommon' 'waylandpp' 'libinput'
   'pcre' 'tinyxml2' 'libdisplay-info'
   'mpp'
 )
@@ -184,6 +184,7 @@ build() {
     -DENABLE_INTERNAL_FSTRCMP=ON
     -DENABLE_INTERNAL_FLATBUFFERS=ON
     -DENABLE_INTERNAL_UDFREAD=ON
+    -DENABLE_INTERNAL_TAGLIB=ON
     -Dlibdvdcss_URL="$srcdir/kodi-libdvdcss-$_libdvdcss_version.tar.gz"
     -Dlibdvdnav_URL="$srcdir/kodi-libdvdnav-$_libdvdnav_version.tar.gz"
     -Dlibdvdread_URL="$srcdir/kodi-libdvdread-$_libdvdread_version.tar.gz"
