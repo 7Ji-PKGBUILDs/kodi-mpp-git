@@ -78,7 +78,7 @@ source=(
   "kodi-flatbuffers-$_flatbuffers_version.tar.gz::https://mirrors.kodi.tv/build-deps/sources/flatbuffers-$_flatbuffers_version.tar.gz"
   "kodi-libudfread-$_libudfread_version.tar.gz::https://mirrors.kodi.tv/build-deps/sources/libudfread-$_libudfread_version.tar.gz"
   "kodi-001-ffmpeg-buildsys.patch" # use ffmpeg-rockchip
-  "kodi-002-dynamic-selection-of-drmplanes-on-gbm.patch::https://patch-diff.githubusercontent.com/raw/xbmc/xbmc/pull/24431.patch"
+  "kodi-002-dynamic-selection-of-drmplanes-on-gbm.patch::https://github.com/hbiyik/xbmc/compare/f02afef0f39f8a3770d0e9fd5483e8a53a1814d7...omega_gbm_drm_dynamic_afbc_video_planes.patch"
   "kodi-003-distutils-eol-in-py312.patch::https://patch-diff.githubusercontent.com/raw/xbmc/xbmc/pull/25211.patch"
   "kodi-004-groovy-wildcards-fix.patch::https://patch-diff.githubusercontent.com/raw/xbmc/xbmc/pull/25212.patch"
   "kodi-005-egl-async-rendering-fixes.patch::https://patch-diff.githubusercontent.com/raw/xbmc/xbmc/pull/25588.patch"
