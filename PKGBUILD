@@ -17,7 +17,7 @@ makedepends=(
   'gperf' 'hicolor-icon-theme' 'java-runtime<21' 'fmt' 'libaacs' 'libass'
   'libbluray' 'libcdio' 'libcec' 'libgl' 'mariadb-libs' 'libmicrohttpd'
   'libmodplug' 'libmpeg2' 'libnfs' 'libplist' 'libpulse' 'libva'
-  'libva-vdpau-driver' 'libxrandr' 'libxslt' 'lirc' 'lzo' 'mesa' 'nasm'
+  'libxrandr' 'libxslt' 'lirc' 'lzo' 'mesa' 'nasm'
   'pipewire' 'python-pycryptodomex' 'python-pillow' 'python-pybluez'
   'python-simplejson' 'shairplay' 'smbclient' 'sndio' 'spdlog' 'taglib'
   'tinyxml' 'swig' 'upower' 'giflib' 'rapidjson' 'ghostscript' 'meson' 'gtest'
@@ -35,7 +35,7 @@ makedepends=(
 depends=(
   'bluez-libs' 'curl' 'dav1d' 'desktop-file-utils' 'hicolor-icon-theme' 'fmt'
   'lcms2' 'libass' 'libbluray' 'libcdio' 'libcec' 'libmicrohttpd' 'libnfs'
-  'libplist' 'libpulse' 'libva' 'libvdpau' 'libxslt' 'lirc' 'lzo'
+  'libplist' 'libpulse' 'libva' 'libxslt' 'lirc' 'lzo'
   'mariadb-libs' 'mesa' 'libpipewire' 'python-pillow' 'python-pycryptodomex'
   'python-simplejson' 'shairplay' 'smbclient' 'sndio' 'spdlog' 'sqlite'
   'taglib' 'tinyxml' 'libxrandr' 'libxkbcommon' 'waylandpp' 'libinput'
@@ -202,7 +202,6 @@ build() {
     -DENABLE_UDEV=ON
     -DENABLE_UPNP=ON
     -DENABLE_VAAPI=ON
-    -DENABLE_VDPAU=ON
     -DENABLE_XSLT=ON
     -DENABLE_LIRCCLIENT=ON
     -DENABLE_INTERNAL_RapidJSON=OFF
