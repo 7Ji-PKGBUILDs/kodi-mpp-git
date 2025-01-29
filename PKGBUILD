@@ -19,7 +19,7 @@ makedepends=(
   'libmodplug' 'libmpeg2' 'libnfs' 'libplist' 'libpulse' 'libva'
   'libxrandr' 'libxslt' 'lirc' 'lzo' 'mesa' 'nasm'
   'pipewire' 'python-pycryptodomex' 'python-pillow' 'python-pybluez'
-  'python-simplejson' 'shairplay' 'smbclient' 'sndio' 'spdlog'
+  'python-simplejson' 'smbclient' 'sndio' 'spdlog'
   'tinyxml' 'swig' 'upower' 'giflib' 'rapidjson' 'ghostscript' 'meson' 'gtest'
   'graphviz' 'pcre' 'tinyxml2' 'libdisplay-info'
   # cmake/scripts/linux/Install.cmake calls distutils
@@ -37,7 +37,7 @@ depends=(
   'lcms2' 'libass' 'libbluray' 'libcdio' 'libcec' 'libmicrohttpd' 'libnfs'
   'libplist' 'libpulse' 'libva' 'libxslt' 'lirc' 'lzo'
   'mariadb-libs' 'mesa' 'libpipewire' 'python-pillow' 'python-pycryptodomex'
-  'python-simplejson' 'shairplay' 'smbclient' 'sndio' 'spdlog' 'sqlite'
+  'python-simplejson' 'smbclient' 'sndio' 'spdlog' 'sqlite'
   'tinyxml' 'libxrandr' 'libxkbcommon' 'waylandpp' 'libinput'
   'pcre' 'tinyxml2' 'libdisplay-info'
   'mpp'
@@ -161,7 +161,7 @@ build() {
     -DUSE_LTO=$(nproc)
     -DVERBOSE=ON
     -DENABLE_LDGOLD=ON
-    -DENABLE_AIRTUNES=ON
+    -DENABLE_AIRTUNES=OFF
     -DENABLE_AVAHI=ON
     -DENABLE_BLURAY=ON
     -DENABLE_CEC=ON
