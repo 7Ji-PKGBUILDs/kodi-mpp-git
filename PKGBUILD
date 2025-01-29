@@ -186,6 +186,7 @@ build() {
     -DENABLE_INTERNAL_FLATBUFFERS=ON
     -DENABLE_INTERNAL_UDFREAD=ON
     -DENABLE_INTERNAL_TAGLIB=ON
+    -DENABLE_INTERNAL_NFS=ON
     -Dlibdvdcss_URL="$srcdir/kodi-libdvdcss-$_libdvdcss_version.tar.gz"
     -Dlibdvdnav_URL="$srcdir/kodi-libdvdnav-$_libdvdnav_version.tar.gz"
     -Dlibdvdread_URL="$srcdir/kodi-libdvdread-$_libdvdread_version.tar.gz"
