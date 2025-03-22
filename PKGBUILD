@@ -6,8 +6,8 @@ _gitname=xbmc
 _ff_branch="6.0"
 
 pkgname=kodi-mpp-git
-pkgver=r175823.dc7f50b.patch.1.6859877547
-pkgrel=1
+pkgver=r176084.ab541b00e4.patch.1.3448866599
+pkgrel=2
 arch=('armv7h' 'aarch64')
 url="https://kodi.tv"
 license=('GPL2')
@@ -21,7 +21,7 @@ makedepends=(
   'pipewire' 'python-pycryptodomex' 'python-pillow' 'python-pybluez'
   'python-simplejson' 'smbclient' 'sndio' 'spdlog'
   'tinyxml' 'swig' 'upower' 'giflib' 'rapidjson' 'ghostscript' 'meson' 'gtest'
-  'graphviz' 'pcre' 'tinyxml2' 'libdisplay-info'
+  'graphviz' 'pcre' 'libdisplay-info'
   # cmake/scripts/linux/Install.cmake calls distutils
   # python 3.12 does no longer come with distutils on board
   'python-setuptools'
@@ -39,7 +39,7 @@ depends=(
   'mariadb-libs' 'mesa' 'libpipewire' 'python-pillow' 'python-pycryptodomex'
   'python-simplejson' 'smbclient' 'sndio' 'spdlog' 'sqlite'
   'tinyxml' 'libxrandr' 'libxkbcommon' 'waylandpp' 'libinput'
-  'pcre' 'tinyxml2' 'libdisplay-info'
+  'pcre' 'libdisplay-info'
   'mpp'
 )
 
@@ -210,6 +210,7 @@ build() {
     -DENABLE_INTERNAL_UDFREAD=ON
     -DENABLE_INTERNAL_TAGLIB=ON
     -DENABLE_INTERNAL_NFS=ON
+    -DENABLE_INTERNAL_TINYXML2=ON
     -Dlibdvdcss_URL="$srcdir/kodi-libdvdcss-$_libdvdcss_version.tar.gz"
     -Dlibdvdnav_URL="$srcdir/kodi-libdvdnav-$_libdvdnav_version.tar.gz"
     -Dlibdvdread_URL="$srcdir/kodi-libdvdread-$_libdvdread_version.tar.gz"
