@@ -173,6 +173,7 @@ build() {
   
   # disable https://rfc.archlinux.page/0023-pack-relative-relocs/
   export LDFLAGS=${LDFLAGS/-Wl,-z,pack-relative-relocs}
+  export CMAKE_POLICY_VERSION_MINIMUM="3.5"
 
   _args=(
     -DCMAKE_BUILD_TYPE=$_cmake_release_type
