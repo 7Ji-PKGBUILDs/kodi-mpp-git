@@ -6,7 +6,7 @@ _gitname=xbmc
 _ff_branch="6.0"
 
 pkgname=kodi-mpp-git
-pkgver=r176084.ab541b00e4.patch.1.3448866599
+pkgver=r176096.8e293ce2a9.patch.1.3448866599
 pkgrel=2
 arch=('armv7h' 'aarch64')
 url="https://kodi.tv"
