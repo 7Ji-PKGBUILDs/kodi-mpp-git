@@ -20,7 +20,7 @@ makedepends=(
   'libxrandr' 'libxslt' 'lirc' 'lzo' 'mesa' 'nasm'
   'pipewire' 'python-pycryptodomex' 'python-pillow' 'python-pybluez'
   'python-simplejson' 'smbclient' 'sndio' 'spdlog'
-  'tinyxml' 'swig' 'upower' 'giflib' 'rapidjson' 'ghostscript' 'meson' 'gtest'
+  'tinyxml' 'swig' 'upower' 'rapidjson' 'ghostscript' 'meson' 'gtest'
   'graphviz' 'pcre' 'libdisplay-info'
   # cmake/scripts/linux/Install.cmake calls distutils
   # python 3.12 does no longer come with distutils on board
@@ -38,7 +38,7 @@ depends=(
   'libplist' 'libpulse' 'libva' 'libxslt' 'lirc' 'lzo'
   'mariadb-libs' 'mesa' 'libpipewire' 'python-pillow' 'python-pycryptodomex'
   'python-simplejson' 'smbclient' 'sndio' 'spdlog' 'sqlite'
-  'tinyxml' 'libxrandr' 'libxkbcommon' 'waylandpp' 'libinput'
+  'tinyxml' 'libxrandr' 'libxkbcommon' 'waylandpp' 'libinput' 'giflib'
   'pcre' 'libdisplay-info'
   'mpp'
 )
