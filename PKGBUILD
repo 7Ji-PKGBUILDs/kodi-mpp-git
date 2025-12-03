@@ -85,6 +85,7 @@ source=(
   "kodi-004-groovy-wildcards-fix.patch::https://patch-diff.githubusercontent.com/raw/xbmc/xbmc/pull/25212.patch"
   "ffmpeg-001-avcodec-nvenc-stop-using-long-deprecated-format-specifiers.patch::https://github.com/FFmpeg/FFmpeg/commit/43b417d516b0fabbec1f02120d948f636b8a018e.patch"
   "ffmpeg-002-avcodec-nvenc-support-sdk122-bit-depth-api.patch::https://github.com/FFmpeg/FFmpeg/commit/06c2a2c425f22e7dba5cad909737a631cc676e3f.patch"
+  "ffmpeg-003-avutil-hwcontext-vaapi-use-correct-type.patch::https://github.com/nyanmisaka/ffmpeg-rockchip/commit/b6b55f6e2be6839faca6067aafe7d3800f2f6ea4.patch"
 )
 
 noextract=(
@@ -111,7 +112,8 @@ b2sums=('SKIP'
         'SKIP'
         'SKIP'
         'c8dfbed01442b1173c94ee7f7c7bda59802e86359be7dfcf52e25a05f245deac1ed8f3ca8e43650bef033cbd44c3ac15d32c191d913227da497187fcbbefa954'
-        '044b1c13336a3cec263c17aa6438cd7b8e19ce328e9c8127d3c6d9dcb8dcfacefde713e47b35217c06826f87d00954b5e0a722fb4ab744c625e3d210d418bd77')
+        '044b1c13336a3cec263c17aa6438cd7b8e19ce328e9c8127d3c6d9dcb8dcfacefde713e47b35217c06826f87d00954b5e0a722fb4ab744c625e3d210d418bd77'
+        'SKIP')
 
 pkgver() {
   local _revnum=0
