@@ -6,9 +6,9 @@ _gitname=xbmc
 _ff_branch="6.0"
 
 pkgname=kodi-mpp-git
-pkgver=r176096.8e293ce2a9.patch.1.3448866599
+pkgver=r176173.a3a448d26b.patch.1.3448866599
 pkgrel=2
-arch=('armv7h' 'aarch64')
+arch=('armv7h' 'aarch64' 'x86_64')
 url="https://kodi.tv"
 license=('GPL2')
 pkgdesc="Kodi ${_codename} with rockchip MPP based VPU decoding support (${_codename})"
@@ -81,8 +81,9 @@ source=(
   "kodi-flatbuffers-$_flatbuffers_version.tar.gz::https://mirrors.kodi.tv/build-deps/sources/flatbuffers-$_flatbuffers_version.tar.gz"
   "kodi-libudfread-$_libudfread_version.tar.gz::https://mirrors.kodi.tv/build-deps/sources/libudfread-$_libudfread_version.tar.gz"
   "kodi-001-ffmpeg-buildsys.patch" # use ffmpeg-rockchip
-  "kodi-002-dynamic-selection-of-drmplanes-on-gbm.patch::https://github.com/hbiyik/xbmc/compare/f02afef0f39f8a3770d0e9fd5483e8a53a1814d7...omega_gbm_drm_dynamic_afbc_video_planes.patch"
+  "kodi-002-dynamic-selection-of-drmplanes-on-gbm.patch::https://github.com/hbiyik/xbmc/compare/a3a448d26b8d560a65655dab2cd122994dc4e146...dynamic_planes_refactor_master-omega.patch"
   "kodi-004-groovy-wildcards-fix.patch::https://patch-diff.githubusercontent.com/raw/xbmc/xbmc/pull/25212.patch"
+  "kodi-005-fix-keymap-of-unkown-codes.patch::https://github.com/hbiyik/xbmc/commit/9cb16f86f7ce10806cacd5a397af619469589600.patch"
   "ffmpeg-001-avcodec-nvenc-stop-using-long-deprecated-format-specifiers.patch::https://github.com/FFmpeg/FFmpeg/commit/43b417d516b0fabbec1f02120d948f636b8a018e.patch"
   "ffmpeg-002-avcodec-nvenc-support-sdk122-bit-depth-api.patch::https://github.com/FFmpeg/FFmpeg/commit/06c2a2c425f22e7dba5cad909737a631cc676e3f.patch"
   "ffmpeg-003-avutil-hwcontext-vaapi-use-correct-type.patch::https://github.com/nyanmisaka/ffmpeg-rockchip/commit/b6b55f6e2be6839faca6067aafe7d3800f2f6ea4.patch"
@@ -109,6 +110,7 @@ b2sums=('SKIP'
         'be5e3c8ea81ce4b6f2e2c1b2f22e1172434c435f096fa7dade060578c506cff0310e3e2ef0627e26ce2be44f740652eb9a8e1b63578c18f430f7925820f04e66'
         '1801d84a0ca38410a78f23e7d44f37e6d53346753c853df2e7380d259ce1ae7f0c712825b95a5753ad0bc6360cfffe1888b9e7bc30da8b84549e0f1198248f61'
         'fbfdab0ec7aaa056c900c5cdd4652a165ea22585923a01ae132ff306f2203d8a18b5472fc56d53706aaaccae1e6e613e886c6ed5400a64a34e333547b732032e'
+        'SKIP'
         'SKIP'
         'SKIP'
         'c8dfbed01442b1173c94ee7f7c7bda59802e86359be7dfcf52e25a05f245deac1ed8f3ca8e43650bef033cbd44c3ac15d32c191d913227da497187fcbbefa954'
