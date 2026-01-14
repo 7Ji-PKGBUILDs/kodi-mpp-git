@@ -6,8 +6,8 @@ _gitname=xbmc
 _ff_branch="6.0"
 
 pkgname=kodi-mpp-git
-pkgver=r176176.8d8341a79c.patch.1.3483684445
-pkgrel=2
+pkgver=r176176.8d8341a79c.patch.1.3484113979
+pkgrel=3
 arch=('armv7h' 'aarch64' 'x86_64')
 url="https://kodi.tv"
 license=('GPL2')
@@ -81,7 +81,7 @@ source=(
   "kodi-flatbuffers-$_flatbuffers_version.tar.gz::https://mirrors.kodi.tv/build-deps/sources/flatbuffers-$_flatbuffers_version.tar.gz"
   "kodi-libudfread-$_libudfread_version.tar.gz::https://mirrors.kodi.tv/build-deps/sources/libudfread-$_libudfread_version.tar.gz"
   "kodi-001-ffmpeg-buildsys.patch" # use ffmpeg-rockchip
-  "kodi-002-dynamic-selection-of-drmplanes-on-gbm.patch::https://github.com/hbiyik/xbmc/compare/8d8341a79c7277292a1d8c8034be430fe943ee4b...dynamic_planes_refactor_master_r4_omega.patch"
+  "kodi-002-dynamic-selection-of-drmplanes-on-gbm.patch::https://github.com/hbiyik/xbmc/compare/a3a448d26b8d560a65655dab2cd122994dc4e146...dynamic_planes_refactor_master-omega.patch"
   "kodi-004-groovy-wildcards-fix.patch::https://patch-diff.githubusercontent.com/raw/xbmc/xbmc/pull/25212.patch"
   "kodi-005-fix-keymap-of-unkown-codes.patch::https://github.com/hbiyik/xbmc/commit/9cb16f86f7ce10806cacd5a397af619469589600.patch"
   "ffmpeg-001-avcodec-nvenc-stop-using-long-deprecated-format-specifiers.patch::https://github.com/FFmpeg/FFmpeg/commit/43b417d516b0fabbec1f02120d948f636b8a018e.patch"
