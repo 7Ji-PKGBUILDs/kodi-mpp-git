@@ -6,8 +6,8 @@ _gitname=xbmc
 _ff_branch="6.0"
 
 pkgname=kodi-mpp-git
-pkgver=r176176.8d8341a79c.patch.1.3484113979
-pkgrel=3
+pkgver=r176176.8d8341a79c
+pkgrel=4
 arch=('armv7h' 'aarch64' 'x86_64')
 url="https://kodi.tv"
 license=('GPL2')
@@ -130,30 +130,8 @@ pkgver() {
 
   _revnum=$(($_kcommits + $_fcommits))
 
-  cd "${srcdir}"
-  local _patchlevel=1 # increase this if the _pr_patch set changes
-  local _pr_patch _timestamp_patch _timestamp_hunk _timestamp_all=0
-  for _pr_patch in \
-    kodi-002-dynamic-selection-of-drmplanes-on-gbm.patch \
-    kodi-003-distutils-eol-in-py312.patch \
-    kodi-004-groovy-wildcards-fix.patch \
-    kodi-005-egl-async-rendering-fixes.patch
-  do
-    _timestamp_patch=$(
-      _timestamp_patch=0
-      IFS=$'\n'
-      for _timestamp_hunk in $(grep '^Date: ' "${_pr_patch}"); do
-        _timestamp_hunk=$(date -d "${_timestamp_hunk:6}" +%s)
-        if (( "${_timestamp_hunk}" > "${_timestamp_patch}" )); then
-          _timestamp_patch="${_timestamp_hunk}"
-        fi
-      done
-      echo "${_timestamp_patch}"
-    )
-    _timestamp_all=$(( "${_timestamp_all}" + "${_timestamp_patch}" ))
-  done
   _commit=$(gitweb-dlagent version ${_url_kodi} --pattern \{commit:.10s\})
-  printf "r%s.%s.patch.%u.%u" $_revnum $_commit ${_patchlevel} ${_timestamp_all}
+  printf "r%s.%s" $_revnum $_commit
 }
 
 prepare() {
