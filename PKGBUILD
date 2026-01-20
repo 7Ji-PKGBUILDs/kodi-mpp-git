@@ -7,7 +7,7 @@ _ff_branch="6.0"
 
 pkgname=kodi-mpp-git
 pkgver=r176176.8d8341a79c
-pkgrel=4
+pkgrel=5
 arch=('armv7h' 'aarch64' 'x86_64')
 url="https://kodi.tv"
 license=('GPL2')
