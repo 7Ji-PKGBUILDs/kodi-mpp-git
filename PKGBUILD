@@ -84,6 +84,7 @@ source=(
   "kodi-002-dynamic-selection-of-drmplanes-on-gbm.patch::https://github.com/hbiyik/xbmc/compare/a3a448d26b8d560a65655dab2cd122994dc4e146...dynamic_planes_refactor_master-omega.patch"
   "kodi-004-groovy-wildcards-fix.patch::https://patch-diff.githubusercontent.com/raw/xbmc/xbmc/pull/25212.patch"
   "kodi-005-fix-keymap-of-unkown-codes.patch::https://github.com/hbiyik/xbmc/commit/9cb16f86f7ce10806cacd5a397af619469589600.patch"
+  "kodi-006-texturePacke_giflib_6_x.patch::https://github.com/xbmc/xbmc/pull/28016.patch"
   "ffmpeg-001-avcodec-nvenc-stop-using-long-deprecated-format-specifiers.patch::https://github.com/FFmpeg/FFmpeg/commit/43b417d516b0fabbec1f02120d948f636b8a018e.patch"
   "ffmpeg-002-avcodec-nvenc-support-sdk122-bit-depth-api.patch::https://github.com/FFmpeg/FFmpeg/commit/06c2a2c425f22e7dba5cad909737a631cc676e3f.patch"
   "ffmpeg-003-avutil-hwcontext-vaapi-use-correct-type.patch::https://github.com/nyanmisaka/ffmpeg-rockchip/commit/b6b55f6e2be6839faca6067aafe7d3800f2f6ea4.patch"
@@ -110,6 +111,7 @@ b2sums=('SKIP'
         'be5e3c8ea81ce4b6f2e2c1b2f22e1172434c435f096fa7dade060578c506cff0310e3e2ef0627e26ce2be44f740652eb9a8e1b63578c18f430f7925820f04e66'
         '1801d84a0ca38410a78f23e7d44f37e6d53346753c853df2e7380d259ce1ae7f0c712825b95a5753ad0bc6360cfffe1888b9e7bc30da8b84549e0f1198248f61'
         'fbfdab0ec7aaa056c900c5cdd4652a165ea22585923a01ae132ff306f2203d8a18b5472fc56d53706aaaccae1e6e613e886c6ed5400a64a34e333547b732032e'
+        'SKIP'
         'SKIP'
         'SKIP'
         'SKIP'
